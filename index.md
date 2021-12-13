@@ -1,6 +1,4 @@
 <a class="zip_download_link" href="https://github.com/Sami-ul/Drag/releases/tag/v1.00.03">Download this project as a .zip file</a>
-# Drag
-Drag is a game created in Processing, which is pretty much Java with some graphics functions. I had knowledge in Java so I created it in using Java conventions for the code. To play, go to the GitHub pages and click and drag to move the ball. After 3 seconds the enemies will start moving. It is an endless game, it doesnt have levels.
 ## Setup For Playing
 1. Go to the [releases](https://github.com/Sami-ul/Drag/releases/tag/v1.00.03) and download Drag.zip.
 2. Unzip it and navigate to the Drag executable.
