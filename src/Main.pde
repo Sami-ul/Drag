@@ -1,6 +1,6 @@
 /*
   Sami-ul
-  Main.pde
+  Game.pde
 */
 Enemy[] enemies;
 Homing[] h;
@@ -17,6 +17,7 @@ int score;
 int hScore;
 int oldSec;
 float pSize;
+boolean slowed;
 boolean kRel;
 boolean endScreen;
 void setup() {
@@ -122,8 +123,25 @@ void draw() {
   }
 }
 
+void keyPressed() {
+  if (key == ' ' && millis() - ms > 3000 && !slowed) {
+    slowed = true;
+    for (int i = 0; i < xSpeeds.length; i++) {
+      xSpeeds[i] = xSpeeds[i]/2;
+      ySpeeds[i] = ySpeeds[i]/2;
+    }
+  }
+}
+
 void keyReleased() {
   kRel = true;
+  if (key == ' ' && millis() - ms > 3000 && slowed) {
+    slowed = false;
+    for (int i = 0; i < xSpeeds.length; i++) {
+      xSpeeds[i] = xSpeeds[i]*2;
+      ySpeeds[i] = ySpeeds[i]*2;
+    }
+  }
 }
 
 void mousePressed() {
