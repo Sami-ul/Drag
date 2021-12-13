@@ -1,5 +1,7 @@
-// Main.pde
-// Created by Sami-ul
+/*
+  Sami-ul
+  Main.pde
+*/
 Enemy[] enemies;
 Homing[] h;
 MousePlayer mp;
@@ -113,6 +115,10 @@ void draw() {
       lose();
       return;
     }
+  }
+  if (mp.getX() > width || mp.getX() < 0 || mp.getY() > height || mp.getY() < 0) {
+    lose();
+    return;
   }
 }
 
