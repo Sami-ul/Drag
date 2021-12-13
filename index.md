@@ -312,5 +312,5 @@
         }
     </script>
     <canvas id="pjsCanvas" style="border: 1px solid black;"></canvas>
-    <script src="/play/processing-1.6.6.min.js"></script>
+    <script src="/play/processing.min.js"></script>
 </body>
