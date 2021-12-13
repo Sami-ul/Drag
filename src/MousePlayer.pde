@@ -1,5 +1,7 @@
-// MousePlayer.pde
-// Created by Sami-ul
+/*
+  Sami-ul
+  MousePlayer.pde
+*/
 public class MousePlayer {
   private float mouseXV;
   private float mouseYV;
@@ -20,10 +22,10 @@ public class MousePlayer {
   public void move(float x, float y, boolean released) {
     this.mouseXV = x;
     this.mouseYV = y;
-    if ((loc.x + size > width) || (loc.x < 0)) {
+    if ((loc.x + size/2 > width) || (loc.x - size/2 < 0)) {
       vel.x = vel.x * -1;
     }
-    if ((loc.y + size > height) || (loc.y < 0)) {
+    if ((loc.y + size/2 > height) || (loc.y - size/2 < 0)) {
       vel.y = vel.y * -1;
     }
     this.mouseVect = new PVector(mouseXV, mouseYV);
