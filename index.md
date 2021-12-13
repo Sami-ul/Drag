@@ -1,7 +1,7 @@
 <head>
     <title>Counter</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="play/p5.min.js"></script>
+    <script type="text/javascript" src="play/processing.min.js"></script>
 </head>
 <body>
     <script type="text/processing">
