@@ -116,6 +116,10 @@ void draw() {
       return;
     }
   }
+  if (mp.getX() > width || mp.getX() < 0 || mp.getY() > height || mp.getY() < 0) {
+    lose();
+    return;
+  }
 }
 
 void keyReleased() {
@@ -203,7 +207,7 @@ public class Enemy {
     public void setYSpeed(int nSpeed) {
       ySpeed = nSpeed;
     }
-    public boolean collide(MousePlayer p, float size) {
+    public boolean collide(MousePlayer mp, float size) {
       return mp.getX() + size/2 > x - shapeSize/2 &&
       mp.getX() - size/2 < x + shapeSize/2 &&
       mp.getY() + size/2 > y - shapeSize/2 &&
@@ -285,10 +289,10 @@ public class MousePlayer {
   public void move(float x, float y, boolean released) {
     this.mouseXV = x;
     this.mouseYV = y;
-    if ((loc.x + size > width) || (loc.x < 0)) {
+    if ((loc.x + size/2 > width) || (loc.x - size/2 < 0)) {
       vel.x = vel.x * -1;
     }
-    if ((loc.y + size > height) || (loc.y < 0)) {
+    if ((loc.y + size/2 > height) || (loc.y - size/2 < 0)) {
       vel.y = vel.y * -1;
     }
     this.mouseVect = new PVector(mouseXV, mouseYV);
