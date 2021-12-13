@@ -1,10 +1,6 @@
-<head>
-    <title>Counter</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="play/processing.min.js"></script>
-</head>
 <body>
-    <script type="text/processing">
+    <script src="play/processing.min.js"></script>
+    <script type="text/processing" data-processing-target="pjsCanvas">
         Enemy[] enemies;
         Homing[] h;
         MousePlayer mp;
@@ -315,5 +311,6 @@
           }
         }
     </script>
-    <canvas id="sketch" style="border: 1px solid black;"></canvas>
+    <canvas id="pjsCanvas" style="border: 1px solid black;"></canvas>
+    <script src="/play/processing-1.6.6.min.js"></script>
 </body>
