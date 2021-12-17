@@ -1,5 +1,7 @@
-// Homing.pde
-// Created by Sami-ul
+/*
+  Sami-ul
+  Homing.pde
+*/
 public class Homing {
   private int x;
   private int y;
@@ -11,16 +13,15 @@ public class Homing {
     this.x = x;
     this.y = y;
     this.shapeSize = shapeSize;
-    slow = 0.03;
+    slow = 0.07;
   }
   public void playerCoor(float x, float y, float size) {
     px = x + size/2;
     py = y + size/2;
   }
-  public void moveX() {
+  public void move() {
+    // Slow the homing ball after approaching player
     x += (px - x) * slow;
-  }
-  public void moveY() {
     y += (py - y) * slow;
   }
   public int getX() {
