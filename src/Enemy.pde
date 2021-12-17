@@ -1,11 +1,14 @@
-// Enemy.pde
-// Created by Sami-ul
+/*
+  Sami-ul
+  Enemy.pde
+*/
 public class Enemy {
     private int x;
     private int y;
     private int shapeSize;
     private int xSpeed;
     private int ySpeed;
+    
     public Enemy(int x, int y, int xSpeed, int ySpeed, int shapeSize) {
       this.x = x;
       this.y = y;
@@ -13,10 +16,8 @@ public class Enemy {
       this.xSpeed = xSpeed;
       this.ySpeed = ySpeed;
     }
-    public void moveX() {
+    public void move() {
       x+=xSpeed;
-    }
-    public void moveY() {
       y+=ySpeed;
     }
     public boolean passedXRangeL() {
@@ -46,7 +47,7 @@ public class Enemy {
     public void setYSpeed(int nSpeed) {
       ySpeed = nSpeed;
     }
-    public boolean collide(MousePlayer p, float size) {
+    public boolean collide(MousePlayer mp, float size) {
       return mp.getX() + size/2 > x - shapeSize/2 &&
       mp.getX() - size/2 < x + shapeSize/2 &&
       mp.getY() + size/2 > y - shapeSize/2 &&
